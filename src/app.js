@@ -15,6 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
       fromEuros() {
         let result = this.desiredAmount * this.selectedCurrency;
         return result.toFixed(2);
+      },
+      toEuros() {
+        let result = this.desiredAmount / this.selectedCurrency;
+        return result.toFixed(2);
       }
     },
     methods: {

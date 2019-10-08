@@ -22,6 +22,14 @@
       <option v-for="(value, country) in currencyData.rates" v-bind:value="value">{{country}}: {{value}}</option>
     </select>
     <p>Result = {{fromEuros}}</p>
+
+    <label for="other-to-euros">Enter amount to convert into Euros: </label>
+    <input v-model="desiredAmount" type="number" name="other-to-euros" value="">
+    <label for="other-to-euros">From Selected Currency: </label>
+    <select v-model="selectedCurrency" class="" name="other-to-euros">
+      <option v-for="(value, country) in currencyData.rates" v-bind:value="value">{{country}}: {{value}}</option>
+    </select>
+    <p>Result = €{{toEuros}}</p>
   </div>
 </body>
 </html>

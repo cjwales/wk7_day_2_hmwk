@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     el: "#app",
     data: {
       currencyData: [],
+      selectedCurrency: null
     },
     mounted() {
       this.fetchCurrencies();
@@ -18,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => response.json())
         .then(data => this.currencyData = data)
       },
-      
+
     }
   })
 })

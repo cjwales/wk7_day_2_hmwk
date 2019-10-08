@@ -8,9 +8,16 @@
 <body>
   <h1>Currency Converter</h1>
   <div id="app">
-    <div v-for="(value, country) in currencyData.rates">
-      {{ country }}: {{ value }}
+    <h3>1 Euro is equal to:</h3>
+    <div id="currency-rates">
+      <div v-for="(value, country) in currencyData.rates">
+        {{ country }}: {{ value }}
+      </div>
     </div>
+    <input type="number" name="" value="">
+    <select v-model="selectedCurrency" class="" name="">
+      <option v-for="(value, country) in currencyData.rates" :value="country">{{country}}: {{value}}</option>
+    </select>
   </div>
 </body>
 </html>

@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Currency Converter</title>
+  <link rel="stylesheet" href="./css/style.css">
   <script type="text/javascript" src="./js/bundle.js"></script>
 </head>
 <body>
@@ -11,11 +12,13 @@
     <h3>1 Euro is equal to:</h3>
     <div id="currency-rates">
       <div v-for="(value, country) in currencyData.rates">
-        {{ country }}: {{ value }}
+        | {{ country }}: {{ value }} |
       </div>
     </div>
-    <input type="number" name="" value="">
-    <select v-model="selectedCurrency" class="" name="">
+    <label for="euros-to-other">Enter amount: </label>
+    <input type="number" name="euros-to-other" value="">
+    <label for="euros-to-other">Select Currency: </label>
+    <select v-model="selectedCurrency" class="" name="euros-to-selected">
       <option v-for="(value, country) in currencyData.rates" :value="country">{{country}}: {{value}}</option>
     </select>
   </div>

@@ -3,3 +3,11 @@
   flex-wrap: wrap;
   list-style-type: none;
 }
+
+#currency-item {
+  color: darkslateblue;
+  margin: 0.5rem;
+  padding: 5px;
+  background: aqua;
+  border: 1px solid;
+}

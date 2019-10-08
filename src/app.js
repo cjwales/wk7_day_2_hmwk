@@ -5,13 +5,16 @@ document.addEventListener("DOMContentLoaded", () => {
     el: "#app",
     data: {
       currencyData: [],
-      selectedCurrency: null
+      selectedCurrency: null,
+      desiredAmount: null
     },
     mounted() {
       this.fetchCurrencies();
     },
     computed: {
-
+      fromEuros() {
+        return parseFloat(this.desiredAmount) * parseFloat(this.selectedCurrency);
+      }
     },
     methods: {
       fetchCurrencies: function (){

@@ -9,18 +9,19 @@
 <body>
   <h1>Currency Converter</h1>
   <div id="app">
-    <h3>1 Euro is equal to:</h3>
+    <h3>1 € is equal to:</h3>
     <div id="currency-rates">
-      <div v-for="(value, country) in currencyData.rates">
-        | {{ country }}: {{ value }} |
+      <div id="currency-item" v-for="(value, country) in currencyData.rates">
+        {{ country }}: {{ value }}
       </div>
     </div>
-    <label for="euros-to-other">Enter amount: </label>
-    <input type="number" name="euros-to-other" value="">
-    <label for="euros-to-other">Select Currency: </label>
+    <label for="euros-to-other">Enter amount to convert from Euros: </label>
+    <input v-model="desiredAmount" type="number" name="euros-to-other" value="">
+    <label for="euros-to-other">Into Selected Currency: </label>
     <select v-model="selectedCurrency" class="" name="euros-to-selected">
-      <option v-for="(value, country) in currencyData.rates" :value="country">{{country}}: {{value}}</option>
+      <option v-for="(value, country) in currencyData.rates" v-bind:value="value">{{country}}: {{value}}</option>
     </select>
+    <p>{{fromEuros}}</p>
   </div>
 </body>
 </html>

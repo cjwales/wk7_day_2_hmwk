@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     computed: {
       fromEuros() {
-        return parseFloat(this.desiredAmount) * parseFloat(this.selectedCurrency);
+        let result = this.desiredAmount * this.selectedCurrency;
+        return result.toFixed(2);
       }
     },
     methods: {

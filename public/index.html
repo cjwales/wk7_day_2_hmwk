@@ -21,7 +21,7 @@
     <select v-model="selectedCurrency" class="" name="euros-to-selected">
       <option v-for="(value, country) in currencyData.rates" v-bind:value="value">{{country}}: {{value}}</option>
     </select>
-    <p>{{fromEuros}}</p>
+    <p>Result = {{fromEuros}}</p>
   </div>
 </body>
 </html>
